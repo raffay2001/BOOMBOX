@@ -7,9 +7,9 @@ const Context = createContext()
 // creating the main context component
 export const StateContext = ({ children }) => {
   const [showCart, setShowCart] = useState(false)
-  const [cartItems, setCartItems] = useState()
+  const [cartItems, setCartItems] = useState([])
   const [totalPrice, setTotalPrice] = useState()
-  const [totalQuantities, setTotalQuantities] = useState()
+  const [totalQuantities, setTotalQuantities] = useState(0)
   const [qty, setQty] = useState(1)
 
   // helper function for increasing the product quantity
@@ -48,7 +48,7 @@ export const StateContext = ({ children }) => {
       setCartItems([...cartItems, { ...product }])
     }
 
-    // dispatching success message
+    // dispatching success toast message
     toast.success(`${qty} ${product.name} added to the cart`)
   }
 
@@ -56,6 +56,7 @@ export const StateContext = ({ children }) => {
     <Context.Provider
       value={{
         showCart,
+        setShowCart,
         cartItems,
         totalPrice,
         totalQuantities,
