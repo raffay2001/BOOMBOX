@@ -1,6 +1,6 @@
 # BOOMBOX.
 
-## See Demo: https://react-crypto-verse.netlify.app
+## See Demo: https://boombox-inky.vercel.app/
 
 ### A Full Stack Headphones Store Site Built Using Next.js, Sanity.io and Stripe 🎧.
 
